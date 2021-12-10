@@ -1,0 +1,96 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb-base",
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "typescript": {},
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "jasmine": true
+    },
+    "rules": {
+        "import/no-import-module-exports": "off",
+        "import/no-relative-packages": "off",
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "no-use-before-define": "off",
+        "no-multi-spaces": 1,
+        "react/jsx-tag-spacing": 1, // 总是在自动关闭的标签前加一个空格，正常情况下也不需要换行
+        "jsx-quotes": 1,
+        "react/jsx-closing-bracket-location": 1, // 遵循JSX语法缩进/格式
+        "react/jsx-boolean-value": 1, // 如果属性值为 true, 可以直接省略
+        "react/no-string-refs": 1, // 总是在Refs里使用回调函数
+        "react/self-closing-comp": 1, // 对于没有子元素的标签来说总是自己关闭标签
+        "react/sort-comp": 1, // 按照具体规范的React.createClass 的生命周期函数书写代码
+        "react/jsx-pascal-case": 1, // React模块名使用帕斯卡命名，实例使用骆驼式命名
+        "import/extensions": "off",
+        "react/prop-types": "off",
+        "camelcase": "off",
+        "no-underscore-dangle": "off",
+        "no-prototype-builtins": "warn",
+        "import/no-named-as-default": "off",
+        "max-len": "off",
+        "no-bitwise": [
+            2,
+            {
+                "allow": [
+                    "~"
+                ]
+            }
+        ],
+        "no-unused-expressions": "off",
+        "no-console": "off",
+        "no-param-reassign": "off",
+        "no-plusplus": "off"
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.{ts,tsx}"
+            ],
+            "rules": {
+                "@typescript-eslint/ban-ts-comment": "off",
+                "@typescript-eslint/no-unused-vars": [
+                    "error"
+                ],
+                "no-shadow": "off", // replaced by ts-eslint rule below
+                "@typescript-eslint/no-shadow": "error"
+            },
+            "parser": "@typescript-eslint/parser",
+            "parserOptions": {
+                "ecmaFeatures": {
+                    "jsx": true
+                }
+            },
+            "extends": [
+                "plugin:@typescript-eslint/recommended"
+            ],
+            "plugins": [
+                "@typescript-eslint"
+            ]
+        }
+    ]
+}
