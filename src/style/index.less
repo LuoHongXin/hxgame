@@ -34,11 +34,25 @@ code {
   height:100vh;
   background: url(../img/stardewbackground.png) no-repeat fixed center center / cover;
     image-rendering: pixelated;
+    overflow: auto;
+    .homeTitle{
+      display: inline-block;
+      font-size: 5em;
+      text-decoration: none;
+      color: hsl(64, 96%, 51%);
+      font-family: 'Boogaloo', cursive;
+      text-shadow: 0 1px 0 hsl(192deg 100% 21%), 0 2px 0 hsl(192deg 100% 21%), 0 3px 0 hsl(192deg 100% 21%), 0 4px 0 hsl(192deg 100% 21%), 0 5px 0 hsl(192deg 100% 21%), 0 6px 1px hsl(0deg 0% 0% / 10%), 0 0 5px hsl(0deg 0% 0% / 10%), 0 1px 3px hsl(0deg 0% 0% / 30%), 0 3px 5px hsl(0deg 0% 0% / 20%), 0 5px 10px hsl(0deg 0% 0% / 25%);
+    }
 }
 .cardBox{
   padding-top: 5vh;
   display:flex;
   justify-content:center;
+  flex-direction: column;
+  align-items: center;
+  .ant-card {
+    margin-bottom: 3vh;
+  } 
   .ant-card-meta-title{
     font-size: 24px;
   }

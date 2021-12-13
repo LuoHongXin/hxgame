@@ -31,6 +31,28 @@ const routesConfig:RoutesConfig = {
       C 或右键单击：手榴弹，每条命有 3 个`,
       url: 'https://js13kgames.com/games/space-huggers/index.html',
     },
+  },
+  {
+    path: '/blackHoleSquare',
+    name: 'blackHoleSquare',
+    component: 'iframeContainer',
+    meta: {
+      title: '黑洞广场（支持移动端）',
+      img: require('../img/blackHoleSquare.gif'),
+      description: '益智类游戏，把所有块清除则过关。向左划开始游戏，点击块会向箭头方向移动，块进入“黑洞”则被清除',
+      url: 'https://js13kgames.com/games/black-hole-square/index.html',
+    },
+  },
+  {
+    path: '/PACKABUNCHAS',
+    name: 'PACKABUNCHAS',
+    component: 'iframeContainer',
+    meta: {
+      title: 'PACKABUNCHAS（支持移动端）',
+      img: require('../img/PACKABUNCHAS.gif'),
+      description: '益智类游戏，用提供的形状拼出指定的形状。点击旋转，拖动图形',
+      url: 'https://js13kgames.com/games/space-huggers/index.html',
+    },
   }],
   Menus: [{
     path: '/home',

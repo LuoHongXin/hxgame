@@ -14,6 +14,7 @@ class Home extends Component {
   render() {
     return (
       <div className="cardBox">
+        <h2 className="homeTitle">HX-GAME</h2>
         <a className="bird" />
          {
            routesConfig.gameMenus.map((menu) => (
