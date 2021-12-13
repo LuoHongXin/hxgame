@@ -992,6 +992,32 @@ module.exports = function (webpackEnv) {
               ),
 
             },
+            {
+              test: /\.less$/,
+              exclude: /\.module\.less/,
+              use: [
+                ...getStyleLoaders({ importLoaders: 2 }, 'less-loader'),
+                // {
+                // 	loader: require.resolve('less-loader'),
+                // 		options: {
+                // 		  	modifyVars: { "@primary-color": "#001529" },
+                // 		},
+                // }
+              ],
+            },
+            // Adds support for CSS Modules, but using LESS
+            // using the extension .module.scss or .module.sass
+            {
+              test: /\.module\.less/,
+              use: getStyleLoaders(
+                {
+                  importLoaders: 2,
+                  modules: true,
+                  getLocalIdent: getCSSModuleLocalIdent,
+                },
+                'less-loader',
+              ),
+            },
 
             // "file" loader makes sure those assets get served by WebpackDevServer.
 

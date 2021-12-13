@@ -1,17 +1,33 @@
 import React, { Component } from 'react';
-import { Layout } from 'antd';
+import { Card } from 'antd';
+import routesConfig from '@/routes';
+import {
+  withRouter,
+} from 'react-router-dom';
 
-const {
-  Content,
-} = Layout;
+const { Meta } = Card;
 class Home extends Component {
+  goPath(path) {
+    this.props.history.push(path);
+  }
+
   render() {
-    console.log(this, 'Home');
     return (
-        <Layout>
-         <Content>Content</Content>
-      </Layout>
+      <div className="cardBox">
+         {
+           routesConfig.gameMenus.map((menu) => (
+           <Card
+           onClick={this.goPath.bind(this, menu.path)}
+           key={menu.name}
+          hoverable
+          style={{ width: '50vw' }}
+          cover={<img alt="example" src={menu.meta.img.default} />}
+           >
+          <Meta title={menu.meta.title} description={menu.meta.description} />
+        </Card>))
+         }
+         </div>
     );
   }
 }
-export default Home;
+export default withRouter(Home);

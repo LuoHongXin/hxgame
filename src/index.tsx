@@ -4,10 +4,10 @@ import { AlitaProvider } from 'redux-alita';
 import {
   HashRouter,
 } from 'react-router-dom';
-import './style/index.less';
 
 import App from './App';
 import 'antd/dist/antd.css';
+import './style/index.less';
 // import reportWebVitals from './reportWebVitals';
 
 // 微应用

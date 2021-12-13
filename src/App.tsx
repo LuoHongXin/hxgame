@@ -2,29 +2,20 @@ import React from 'react';
 import {
   withRouter, Switch, Route, Redirect,
 } from 'react-router-dom';
-import { connectAlita, setAlitaState } from 'redux-alita';
+import { connectAlita } from 'redux-alita';
 import routes from '@/routes';
-import Home from '@/pages/Home';
+import AllComponents from '@/pages';
 
-type Props = {
-    setAlitaState?: typeof setAlitaState
-  }
-const App: React.FC<Props> = (props) => (
+const App = () => (
     <div className="App" >
-      <div id="microApp" />
-      <iframe src="http://localhost:9000" frameBorder="0" />
+    <div id="microApp" />
       <Switch>
       {
-        // 游戏菜单
-        routes.gameMenus.map((menu) => <Route key={menu.name} path={menu.path} component={ menu.component} />)
-
-      }
-      {
-        console.log(props, 999)
-      }
-      {
-        // 普通菜单
-        routes.Menus.map((menu) => <Route key={menu.name} path={menu.path} component={ Home} />)
+        // 菜单
+      [...routes.Menus, ...routes.gameMenus].map((menu) => {
+        const Component = AllComponents[menu.component];
+        return <Route key={menu.name} path={menu.path} render={() => <Component />} />;
+      })
       }
     <Redirect from="/" to="/home" exact />
 </Switch>
