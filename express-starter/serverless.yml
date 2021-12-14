@@ -1,0 +1,6 @@
+app: hxgame
+component: express
+name: hxgame
+
+inputs:
+  src: ./
