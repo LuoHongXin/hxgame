@@ -3,6 +3,7 @@
 
 ## 介绍
 基于 乾坤 + iframe 的微前端架构，无视框架，收集各种前端小游戏，并把它们整合到一起。主应用则是基于 react + react-router-dom 搭建开发。
+<a href="https://service-1fpayfkw-1302167662.gz.apigw.tencentcs.com/release/">游戏在线地址</a>
 
 ## 启动项目
 ```shell
