@@ -20,7 +20,7 @@ npm run build
 ```
 
 ## 部署项目
-基于 serverless 无服务化部署项目，之前本来想用 serverless 指令部署到腾讯云的 Serverless。但现在 serverless 指令好像被 aws 接管了（aws的注册还要绑定海外账户）。所以只能通过编写 serverless 应用模板，直接将文件夹提交到腾讯云的 Serverless。
+基于 serverless 无服务化部署项目，之前本来想用 serverless 指令部署到<a href="https://cloud.tencent.com/">腾讯云</a>的 Serverless。但现在 serverless 指令好像被 aws 接管了（aws的注册还要绑定海外账户）。所以只能通过编写 serverless 应用模板，直接将文件夹提交到腾讯云的 Serverless。
 步骤如下：
 #### 1、打包后，将打包的代码移入 express-starter 文件夹中
 <img src="./readmeImg/1.jpg">

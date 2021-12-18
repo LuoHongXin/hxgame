@@ -51,7 +51,7 @@ const routesConfig:RoutesConfig = {
       title: 'PACKABUNCHAS（支持移动端）',
       img: require('../img/PACKABUNCHAS.gif'),
       description: '益智类游戏，用提供的形状拼出指定的形状。点击旋转，拖动图形',
-      url: 'https://js13kgames.com/games/space-huggers/index.html',
+      url: 'https://js13kgames.com/games/packabunchas/index.html',
     },
   }],
   Menus: [{

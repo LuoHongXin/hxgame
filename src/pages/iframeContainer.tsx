@@ -10,7 +10,6 @@ type Props = {
 
 const iframeContainer :React.FC<Props> = (props:Props) => {
   let menu = null;
-  console.log(props, 666);
   Object.keys(routesConfig)?.forEach((key) => {
     Array.isArray(routesConfig[key]) && routesConfig[key]?.forEach((r) => {
       if (r.path === props.location.pathname) {
